@@ -4,51 +4,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Chatbot Catastro Multipropósito</title>
 
 <style>
 
 body{
-font-family: Arial, Helvetica, sans-serif;
 margin:0;
-background:#f4f6f7;
-}
-
-header{
-background:#1b4f72;
+font-family:Arial, Helvetica, sans-serif;
+background:#343541;
 color:white;
-padding:20px;
-text-align:center;
+display:flex;
+height:100vh;
 }
 
-main{
-max-width:900px;
-margin:auto;
+/* Barra lateral */
+
+.sidebar{
+width:260px;
+background:#202123;
+padding:20px;
+box-sizing:border-box;
+}
+
+.sidebar h2{
+margin-top:0;
+font-size:20px;
+}
+
+.sidebar p{
+color:#aaa;
+font-size:14px;
+}
+
+/* Zona principal */
+
+.main{
+flex:1;
+display:flex;
+flex-direction:column;
+}
+
+/* Encabezado */
+
+.header{
+background:#444654;
+padding:15px;
+text-align:center;
+font-size:18px;
+}
+
+/* Área del chat */
+
+.chat-area{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
 padding:40px;
 }
 
-h1{
-margin:0;
-}
-
-.descripcion{
-text-align:center;
-margin-bottom:40px;
-}
+/* Contenedor del chat */
 
 .chat-container{
-background:white;
-padding:30px;
+width:100%;
+max-width:800px;
+background:#444654;
 border-radius:10px;
-box-shadow:0px 0px 10px rgba(0,0,0,0.15);
+padding:30px;
+box-shadow:0px 0px 20px rgba(0,0,0,0.3);
 }
 
-footer{
-margin-top:40px;
-background:#1b4f72;
-color:white;
+.chat-title{
 text-align:center;
-padding:10px;
+margin-bottom:20px;
+font-size:22px;
+}
+
+.chat-description{
+text-align:center;
+color:#ccc;
+margin-bottom:30px;
 }
 
 </style>
@@ -57,28 +93,43 @@ padding:10px;
 
 <body>
 
-<header>
-<h1>Chatbot de Catastro Multipropósito</h1>
-<p>Asistente virtual para resolver dudas sobre gestión catastral en Colombia</p>
-</header>
+<!-- Barra lateral -->
 
-<main>
+<div class="sidebar">
 
-<div class="descripcion">
+<h2>CatastroBot</h2>
 
-<h2>Consulta sobre Catastro</h2>
+<p>Asistente sobre:</p>
 
-<p>
-Este chatbot permite responder preguntas sobre catastro multipropósito,
-gestión predial, avalúo catastral y ordenamiento territorial.
-</p>
+<ul>
+<li>Catastro multipropósito</li>
+<li>Avalúo catastral</li>
+<li>Predios</li>
+<li>Gestión del suelo</li>
+</ul>
 
 </div>
 
+<!-- Zona principal -->
+
+<div class="main">
+
+<div class="header">
+Chatbot de Catastro Multipropósito
+</div>
+
+<div class="chat-area">
 
 <div class="chat-container">
 
-<div id="chatbot">
+<div class="chat-title">
+Asistente Virtual
+</div>
+
+<div class="chat-description">
+Haz preguntas sobre catastro multipropósito en Colombia
+</div>
+
 <script type="text/javascript">
   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
@@ -89,24 +140,26 @@ gestión predial, avalúo catastral y ordenamiento territorial.
           versionID: 'production',
           voice: {
             url: "https://runtime-api.voiceflow.com"
+          },
+          render: {
+            mode: 'embedded',
+            target: document.getElementById(...)
           }
         });
       }
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
+
+<div id="chatbot">
+
+</div>
+
 </div>
 
 </div>
 
-</main>
-
-
-<footer>
-
-<p>Proyecto académico | Ingeniería Catastral</p>
-
-</footer>
+</div>
 
 </body>
 
