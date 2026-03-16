@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot Catastro Multipropósito</title>
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#f4f6f7;
+}
+
+header{
+background:#1b4f72;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+main{
+max-width:900px;
+margin:auto;
+padding:40px;
+}
+
+h1{
+margin:0;
+}
+
+.descripcion{
+text-align:center;
+margin-bottom:40px;
+}
+
+.chat-container{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.15);
+}
+
+footer{
+margin-top:40px;
+background:#1b4f72;
+color:white;
+text-align:center;
+padding:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Chatbot de Catastro Multipropósito</h1>
+<p>Asistente virtual para resolver dudas sobre gestión catastral en Colombia</p>
+</header>
+
+<main>
+
+<div class="descripcion">
+
+<h2>Consulta sobre Catastro</h2>
+
+<p>
+Este chatbot permite responder preguntas sobre catastro multipropósito,
+gestión predial, avalúo catastral y ordenamiento territorial.
+</p>
+
+</div>
+
+
+<div class="chat-container">
+
+<div id="chatbot">
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '69b81b6035efdab2c3311650' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+</div>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<p>Proyecto académico | Ingeniería Catastral</p>
+
+</footer>
+
+</body>
+
+</html>
